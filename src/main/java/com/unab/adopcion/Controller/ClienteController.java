@@ -15,50 +15,50 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.unab.adopcion.Dao.MascotaDao;
-import com.unab.adopcion.Models.Mascota;
-import com.unab.adopcion.Service.MascotaService;
+import com.unab.adopcion.Dao.ClienteDao;
+import com.unab.adopcion.Models.Cliente;
+import com.unab.adopcion.Service.ClienteService;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/mascota")
-public class MascotaController {
+@RequestMapping("/cliente")
+public class ClienteController {
     @Autowired
-    private MascotaDao mascotaDao; 
-    public MascotaDao getMascotaDao() {
-        return mascotaDao;
+    private ClienteDao clienteDao; 
+    public ClienteDao getClienteDao() {
+        return clienteDao;
     }
 
-    public void setMascotaDao(MascotaDao mascotaDao) {
-        this.mascotaDao = mascotaDao;
+    public void setClienteDao(ClienteDao clienteDao) {
+        this.clienteDao = clienteDao;
     }
 
     @Autowired
-    private MascotaService mascotaService;
+    private ClienteService clienteService;
     
     @PostMapping(value="/")
-    public ResponseEntity<Mascota> agregar(@RequestBody Mascota mascota){        
-        Mascota obj = mascotaService.save(mascota);
+    public ResponseEntity<Cliente> agregar(@RequestBody Cliente cliente){        
+        Cliente obj = clienteService.save(cliente);
         return new ResponseEntity<>(obj, HttpStatus.OK);     
     }
    
     @DeleteMapping(value="/{id}") 
-    public ResponseEntity<Mascota> eliminar(@PathVariable String id){ 
-        Mascota obj = mascotaService.findById(id); 
+    public ResponseEntity<Cliente> eliminar(@PathVariable String id){ 
+        Cliente obj = clienteService.findById(id); 
         if(obj!=null) 
-            mascotaService.delete(id); 
+            clienteService.delete(id); 
         else 
             return new ResponseEntity<>(obj, HttpStatus.INTERNAL_SERVER_ERROR); 
         return new ResponseEntity<>(obj, HttpStatus.OK); 
     }
     
     @PutMapping(value="/") 
-    public ResponseEntity<Mascota> editar(@RequestBody Mascota mascota){ 
-        Mascota obj = mascotaService.findById(mascota.getId_mascota()); 
+    public ResponseEntity<Cliente> editar(@RequestBody Cliente cliente){ 
+        Cliente obj = clienteService.findById(cliente.getId_cliente()); 
         if(obj!=null) { 
-            obj.setNombre_mascota(mascota.getNombre_mascota());
-            obj.setId_mascota(mascota.getId_mascota());
-            mascotaService.save(obj); 
+            obj.setNombre_cliente(cliente.getNombre_cliente());
+            obj.setId_cliente(cliente.getId_cliente());
+            clienteService.save(obj); 
         } 
         else 
             return new ResponseEntity<>(obj, HttpStatus.INTERNAL_SERVER_ERROR); 
@@ -66,13 +66,13 @@ public class MascotaController {
     }
     
     @GetMapping("/list") 
-    public List<Mascota> consultarTodo(){
-        return mascotaService.findAll(); 
+    public List<Cliente> consultarTodo(){
+        return clienteService.findAll(); 
     }
     
     @GetMapping("/list/{id}") 
-    public Mascota consultaPorId(@PathVariable String id){ 
-        return mascotaService.findById(id); 
+    public Cliente consultaPorId(@PathVariable String id){ 
+        return clienteService.findById(id); 
     }
     
 }

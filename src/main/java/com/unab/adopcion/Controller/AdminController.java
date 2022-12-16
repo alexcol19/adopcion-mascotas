@@ -1,12 +1,18 @@
 package com.unab.adopcion.Controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.unab.adopcion.Models.Admin;
+
+@SpringBootApplication
 public class AdminController {
-    @Autowired
-    private AdminService adminService;
 
-    @GetMapping
-    
+	public static void main(String[] args) {
+		SpringApplication.run(AdminController.class, args);
+	}
+	Admin admin= new Admin ();
+	
+
 }
