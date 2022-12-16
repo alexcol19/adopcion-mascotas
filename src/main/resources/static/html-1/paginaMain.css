@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensend&display=swap');
+
+*{
+    /*margin: 0px;*/
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-image: url("./img/img3.jpg") ;
+    background-repeat: no-repeat;/*para no repetir la imagen al agrandar o reducir*/
+    background-size: contain;
+}
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 1.35em;}
+p{font-size: 1.10em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: rgba(0, 149, 255, 0.508);
+
+}
+button:hover{
+    background-color: rgb(13, 13, 41);
+}
+.header{
+    z-index: 10;/*hace que el menu quede por encima de las fotos*/
+    /*position: fixed;
+    width: 100%;*/
+}
+
+.header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header ul li ul{
+    display: flex;
+    flex-direction: column;
+}
+/*para eliminar las viñetas de las listas*/
+ul{
+    list-style: none;
+}
+ul li  {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    line-height: 30px;
+    text-align: center;
+    font-size: 10px; 
+    
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 20px;
+    display: block;
+}
+/*Dar estilo a los subgrupos*/
+ul li a:hover{
+    background-color: rgba(231, 128, 23, 0.5);
+}
+ul li ul li{
+    display: none;
+}
+ul li ul li a {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 20px;
+}
+ul li:hover ul li{
+    display:block;
+}
+.container{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    /*height: 100vh;*/
+    max-width: 1400px;
+    margin: auto;
+}
+.color-acento{color: rgb(24, 29, 172);}
+
+.central{
+    width: 60%;
+    margin:auto;
+    background-color: transparent;
+}
+nav ul{
+    /*width: 100%;
+    margin: auto;
+    background-color: transparent;*/
+}
+.slider{
+    position: relative;
+    width: 100%;
+    height: 400px;
+
+}
+.slider li { 
+    position: absolute; /*Posicionar la imagen*/
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: inherit;/*hereda la altura de su padre slider*/
+    height:inherit ;
+    transition: opacity 1.0s;
+}
+.slider li:first-child{
+    opacity: 0;
+}
+
+.slider li img{
+    width: 100%;
+    height: 550px;
+    object-fit:contain;*/
+}
+/*para acceder a las imagenes*/
+.slider li:target{
+    opacity:1;
+}
+.botones{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+.slider li{
+    position: 100%;
+
+    left: 0;
+}
+#quienes-somos{
+    background-color: rgb(246, 236, 224) ;
+    color: rgb(135, 49, 49);
+    text-align: center;
+
+}
+#quienes-somos .container{
+    padding: 150px; 6px;
+}
+#quienes-somos h2{
+    margin: top 0;
+}
+#quienes-somos.carta{
+       
+}
+.carta:first-child{
+
+}
+.carta:nth-child(2){
+
+}
+.carta:nth-child(3){
+
+}
+#adopcion{
+    background-image: url("./img/logo.jpg") ;
+    background-repeat: no-repeat;
+    color: rgb(21, 21, 142);
+    text-align: center;
+    height: 90vh;
+}
+#adopcion .container{
+    padding: 200px; 12px;
+}
+#adopcion h2{
+    margin-top: 0;
+}
+#final{
+    background-image: url("./img/logo.jpg") ;
+    background-repeat: no-repeat;/*para no repetir la imagen al agrandar o reducir*/
+    background-size: cover;
+    text-align: center;
+    height: 40vh;
+    
+}
+#adopcion .container{
+    padding: 150px; 12px;
+}
+
+
+
+
+
+
+
