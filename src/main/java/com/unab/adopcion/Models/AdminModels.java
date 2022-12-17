@@ -14,7 +14,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name="admin")
-public class Admin  implements Serializable{
+public class AdminModels  implements Serializable{
     @Id
     @Column(name="id_admin")
     private String id_admin;

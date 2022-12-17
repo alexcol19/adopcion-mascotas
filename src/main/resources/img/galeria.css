@@ -6,7 +6,7 @@
  box-sizing: border-box;   
 }
 body{
-    background-image: url(/img/Logo.jpg);
+    background-image: url(/src/main/resources/img/Logo.jpg);
     background-repeat: no-repeat;
     text-align: center;
     height: 100vh;

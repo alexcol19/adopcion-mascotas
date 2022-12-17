@@ -2,6 +2,7 @@ package com.unab.adopcion.Models;
 
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,18 +16,22 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name="adopcion")
-public class Adopcion  implements Serializable{
+public class AdopcionModels  implements Serializable{
     @Id
     @Column(name="id_adopcion")
     private String id_adopcion;
-    @Column(name="nombre_adopcion")
-    private String nombre_adopcion;
-    @Column(name="contraseña_adopcion")
-    private String contraseña_adopcion;
+    @Column(name="fecha_adopcion")
+    private Date fecha_adopcion;
+    @Column(name="cantidad_adopcion")
+    private double cantidad_adopcion;
+    @Column(name="tipo_adopcion")
+    private String tipo_adopcion;
+    @Column(name="id_cliente")
+    private String id_cliente; 
 
     @Override
     public String toString() {
-        return "Adopcion [id_adopcion=" + id_adopcion + ", nombre_adopcion=" + nombre_adopcion + ", contraseña_cliente="
-                + contraseña_adopcion + "]";
+        return "Adopcion [id_adopcion=" + id_adopcion + ", fecha_adopcion=" + fecha_adopcion + ", cantidad_adopcion="
+        + cantidad_adopcion + "tipo_adopcion=" + tipo_adopcion + ",id_cliente=" + id_cliente +"]";
     }
 }

@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.unab.adopcion.Dao.ClienteDao;
-import com.unab.adopcion.Models.Cliente;
+import com.unab.adopcion.Models.ClienteModels;
 import com.unab.adopcion.Service.ClienteService;
 
 @RestController

@@ -1,7 +1,7 @@
 package com.unab.adopcion.Service;
 
 import com.unab.adopcion.Models.Admin;
-import com.unab.adopcion.Dao.AdminDao;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired; 
@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class AdminService {
     @Autowired
-    private AdminDao adminDao;
+    private AdopcionApplication adminDao;
 
     @Transactional(readOnly=false)
     public Admin save(Admin admin) {

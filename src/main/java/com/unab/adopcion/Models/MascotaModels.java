@@ -14,22 +14,22 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name="mascota")
-public class Mascota  implements Serializable{
+public class MascotaModels  implements Serializable{
     @Id
     @Column(name="id_mascota")
     private String id_mascota;
     @Column(name="nombre_mascota")
     private String nombre_mascota;
-    @Column(name="contraseña_mascota")
-    private String contraseña_mascota;
+    @Column(name="tipo_mascota")
+    private String tipo_mascota;
+    @Column(name="id_cliente")
+    private String id_cliente;
 
-    public Mascota() {
-    }
 
     @Override
     public String toString() {
-        return "Cliente [id_mascota=" + id_mascota + ", nombre_mascota
-                + contraseña_mascota + "]";
+        return "Mascota [id_mascota=" + id_mascota + ", nombre_mascota=" + nombre_mascota +", tipo_mascota=" 
+                + tipo_mascota + ", id_cliente=" + id_cliente + "]";
     }
 }
 
