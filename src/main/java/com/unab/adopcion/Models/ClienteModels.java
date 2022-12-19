@@ -14,7 +14,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name="cliente")
-public class ClienteModels  implements Serializable{
+public class Cliente  implements Serializable{
     @Id
     @Column(name="id_cliente")
     private String id_cliente;
