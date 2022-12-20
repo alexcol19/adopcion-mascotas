@@ -24,11 +24,17 @@ public class AdopcionModels  implements Serializable{
     private Date fecha_adopcion;
     @Column(name="cantidad_adopcion")
     private double cantidad_adopcion;
+    /**
+     *
+     */
     @Column(name="tipo_adopcion")
     private String tipo_adopcion;
     @Column(name="id_cliente")
     private String id_cliente; 
 
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
     @Override
     public String toString() {
         return "Adopcion [id_adopcion=" + id_adopcion + ", fecha_adopcion=" + fecha_adopcion + ", cantidad_adopcion="
